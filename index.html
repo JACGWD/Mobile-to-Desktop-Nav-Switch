@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Mobile to Desktop Nav and Header Switch</title>
+
+<link rel="stylesheet" href="css/simple-css-reset.css" media="all" />
+<link rel="stylesheet" href="css/style.css?v=2" media="all" />
+
+</head>
+<body>
+
+<nav>
+  <!-- NAV is first on mobile, for UX purposes -->
+  <a class="hide-text" id="hamburger" onclick="NavShow();">Navigation</a>
+
+  <ul class="navigation">
+
+      <li><a href="#" class="currentpage">home</a></li>
+      <li><a href="#">about</a></li>
+      <li><a href="#">privacy policy</a></li>
+      <li><a href="#">contact</a></li>
+  </ul>
+</nav>
+
+
+<header>
+    This is the header area, used for branding purposes
+</header>
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+	function NavShow(){
+	var topPos = $(".navigation").css("display");
+	if(topPos == 'none'){
+	$('.navigation').css('display' , 'block');
+}
+	else{
+	$(".navigation").css('display' , 'none');}
+}
+
+</script>
+</body>
+</html>

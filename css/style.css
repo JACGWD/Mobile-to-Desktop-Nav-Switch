@@ -1,0 +1,98 @@
+/* ==========================================================================
+   CSS for all sizes   |   Mobile First   |  Feel free to adjust as necessary.
+   ========================================================================== */
+
+/* ----  Default Mobile Styles ---- */
+
+header {
+  background-color: blue;
+  height: 200px;
+  color: #fff;
+  font-size: 1.3em;
+  border: 1px solid #000;
+  line-height: 200px;
+  text-align: center;
+}
+
+
+
+/* ----  Hide navigation behind hamburger icon on page load ---- */
+ul.navigation {display: none;}
+
+ul.navigation {
+  background-color: #fff;
+  padding: 0.5em;
+  color: #444;
+}
+
+nav a#hamburger {
+width: 32px;
+height: 32px;
+background-image: url("style_images/hamburger.png");
+background-repeat: no-repeat;
+display: block;
+border: 1px solid #444;
+}
+
+nav ul li {
+  border: 1px solid #444;
+  padding: 0;
+  margin: 0.25em;
+}
+
+nav ul li a {
+  display: block;
+  height: 100%;
+  margin: 0.25em;
+}
+
+
+
+/* ==========================================================================
+   CSS for desktops (1024px and above)   |  Feel free to adjust as necessary.
+   ========================================================================== */
+
+@media only screen and (min-width: 64em) {
+
+  header {
+    position: relative;
+    top: -44px;
+  }
+
+  nav {
+    position: relative;
+    top: 200px;
+    height: 34px;
+    border: 1px solid #444;
+    padding: 0.25em;
+  }
+
+  /* ----  Display navigation & hide hamburger icon on page load @ 1024 and above ---- */
+  ul.navigation {
+    display: block;
+    padding: 0;
+  }
+
+  nav a#hamburger {
+  display: none;
+  }
+
+  nav ul li {
+      display: inline-block;
+      width: 200px;
+  }
+
+}
+
+
+  /*
+      .hide-text for image replacements
+      See: http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
+  */
+.currentpage {font-weight: bold;}
+
+.hide-text {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
